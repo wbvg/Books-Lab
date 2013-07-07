@@ -1,0 +1,10 @@
+<% @authors.each do |author| %>
+
+<ul>
+  <li><%= image_tag(author.image) %></li>
+  <li><%= link_to(author.name, author) %></li>
+  <li><%= author.bio %> </li>
+  <li><%= author.genre %> </li>
+</ul>
+
+<% end %>

@@ -1,0 +1,23 @@
+<% @authors.each do |author| %>
+  <%= image_tag(author.image) %><br/>
+  <%= author.name %><br/>
+  <%= author.bio %><br/>
+  <%= author.genre %><br/>
+
+
+<% end %>
+
+    <%= link_to 'edit', edit_author_path(@author) %>
+    <%= link_to 'delete', @author, :method => :delete %>
+
+<hr>
+
+<% @author.books.each do |book| %>
+
+  <%= book.title %><br/>
+  <%= book.description %><br/>
+  <%= book.isbn %><br/>
+  <%= book.image %><br/>
+
+<% end %>
+
